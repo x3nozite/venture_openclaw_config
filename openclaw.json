@@ -1,0 +1,152 @@
+{
+  "agents": {
+    "defaults": {
+      "skills": [
+        "gog"
+      ],
+      "authInheritance": {
+        "agentId": "main"
+      },
+      "models": {
+        "google/gemini-3.1-pro-preview": {},
+        "google/gemini-3.6-flash": {}
+      },
+      "model": {
+        "primary": "google/gemini-3.5-flash-lite",
+        "fallbacks": [
+          "google/gemini-3.5-flash-lite",
+          "google/gemini-3.6-flash"
+        ]
+      },
+      "sandbox": {
+        "mode": "off"
+      },
+      "utilityModel": "google/gemini-3.5-flash-lite",
+      "thinkingDefault": "low",
+      "compaction": {
+        "mode": "safeguard",
+        "keepRecentTokens": 4000,
+        "recentTurnsPreserve": 2
+      }
+    },
+    "entries": {
+      "venture-creation-agent": {
+        "name": "venture-creation-agent",
+        "workspace": "/home/node/.openclaw/workspace",
+        "agentDir": "/home/node/.openclaw/agents/venture-creation-agent/agent",
+        "identity": {
+          "name": "venture-creation-agent"
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "anthropic": {
+        "config": {
+          "sessionCatalog": {
+            "enabled": false
+          }
+        }
+      },
+      "codex": {
+        "config": {
+          "sessionCatalog": {
+            "enabled": false
+          }
+        }
+      },
+      "google": {
+        "enabled": true
+      },
+      "duckduckgo": {
+        "enabled": true
+      }
+    }
+  },
+  "meta": {
+    "migrations": {
+      "modelPolicyAllowlist": true,
+      "utilityModelSeparation": true
+    },
+    "lastTouchedVersion": "2026.9.5"
+  },
+  "wizard": {
+    "securityAcknowledgedAt": "2026-09-21T15:40:23.685Z",
+    "lastRunAt": "2026-09-21T15:45:25.212Z",
+    "lastRunVersion": "2026.9.5",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "telemetry": {
+    "enabled": false,
+    "consentedAt": "2026-09-21T15:40:25.603Z"
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "OPENCLAW_GATEWAY_TOKEN"
+      }
+    },
+    "port": 18789,
+    "bind": "lan",
+    "tailscale": {
+      "mode": "off"
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ]
+    }
+  },
+  "tools": {
+    "profile": "full",
+    "toolSearch": true,
+    "allow": [
+      "read",
+      "write",
+      "exec",
+      "tool_search",
+      "tool_describe",
+      "tool_call"
+    ],
+    "deny": [
+      "image_generate",
+      "music_generate",
+      "video_generate",
+      "tts"
+    ],
+    "web": {
+      "search": {
+        "provider": "duckduckgo",
+        "enabled": true
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      },
+      "google:setup-0ce005dc-7591-4f14-83e2-8e3e7aa19c2d": {
+        "provider": "google",
+        "mode": "api_key"
+      }
+    }
+  },
+  "hooks": {
+    "internal": {
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  }
+}
