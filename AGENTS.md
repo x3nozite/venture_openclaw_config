@@ -33,4 +33,4 @@ On a tool/network error, report it and stop. Do not retry the same failing comma
 ## gog Calendar Syntax (known-working, don't re-discover with --help)
 Check today: gog calendar events --today
 Create: gog calendar create primary --summary "X" --from "ISO8601+TZ" --to "ISO8601+TZ"
-Delete: run `gog calendar --help` once to confirm delete syntax, then use it directly next time
+Delete: gog calendar delete primary \<event_id\> --force
