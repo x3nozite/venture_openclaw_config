@@ -13,7 +13,7 @@ docker compose up -d```
 
 
 ## After building/running Containers
-**Follow along the openclaw onboarding
+*Follow along the openclaw onboarding*
 
 Some additional things you should get ready first
 ### Preferred AI API Key
