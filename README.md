@@ -4,6 +4,14 @@
 - *openclaw.json* -> in your openclaw config directory (default should be ~/.openclaw)
 - *AGENTS.md* -> inside /workspace in the openclaw config (default ~/.openclaw/workspace)
 
+## Getting the docker containers ready
+- Git clone the openclaw repo
+- Navigate to the openclaw folder
+- run ```export OPENCLAW_IMAGE="ghcr.io/openclaw/openclaw:latest"
+./scripts/docker/setup.sh
+docker compose up -d```
+
+
 ## After building/running Containers
 **Follow along the openclaw onboarding
 
