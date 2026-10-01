@@ -5,7 +5,7 @@
 - *AGENTS.md* -> inside /workspace in the openclaw config (default ~/.openclaw/workspace)
 
 ## Getting the docker containers ready
-- Git clone the [openclaw repo](https://github.com/openclaw)
+- Git clone the [openclaw repo](https://github.com/openclaw/openclaw)
 - Navigate to the openclaw folder
 - run this command
 ```
